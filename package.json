@@ -1,6 +1,6 @@
 {
   "name": "origami-app-theme",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "Theme app for Origami CMS",
   "main": "manifest.js",
   "repository": "https://github.com/origami-cms/plugin-theme",
