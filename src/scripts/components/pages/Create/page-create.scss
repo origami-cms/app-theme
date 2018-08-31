@@ -1,0 +1,10 @@
+@import 'zen-css/import';
+@import 'zen-css/components/type';
+@import 'zen-css/components/card';
+
+:host {
+    .card {
+        margin: auto;
+        max-width: 48rem;
+    }
+}

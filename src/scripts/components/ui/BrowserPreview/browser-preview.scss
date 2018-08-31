@@ -1,0 +1,78 @@
+@import 'zen-css/import';
+@import 'zen-css/components/type';
+
+:host {
+    position: relative;
+    @extend %comp-card;
+    padding: 0;
+
+    &, * {@extend %reset;}
+
+
+    $header-height: calc(var(--input-height) + var(--size-small));
+    $gap: 0.5rem;
+
+    header {
+        position: relative;
+        height: $header-height;
+        line-height: $header-height;
+        background-color: var(--color-grey-200);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+
+        span.buttons {
+            &, &:before, &:after {
+                position: relative;
+                display: inline-block;
+                height: 1rem;
+                width: 1rem;
+                vertical-align: top;
+                border-radius: 50%;
+                background: var(--color-white);
+            }
+
+            & {
+                margin-left: 5rem;
+                margin-top: 0.75rem;
+            }
+
+            &:before, &:after {
+                content: '';
+            }
+            &:before {
+                margin-left: -2rem;
+            }
+            &:after {
+                margin-left: -3rem;
+            }
+        }
+
+        span.address {
+            position: absolute;
+            top: calc(var(--size-small) + #{$gap});
+            left: $gap;
+            right: $gap;
+            bottom: $gap;
+            background-color: var(--color-grey-50);
+            @extend %rounded;
+            line-height: 2;
+            padding-left: var(--size-tiny);
+        }
+
+        zen-icon {
+            position: absolute;
+            right: $gap;
+            bottom: $gap;
+        }
+    }
+    iframe {
+        position: absolute;
+        top: $header-height;
+        width: 100%;
+        height: calc(100% - #{$header-height});
+        border: $gap solid var(--color-grey-200);
+        border-top: none;
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+    }
+}

@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+.vscode
+.tsbuild
+.nyc_output
+coverage*
+*.log
+/pages
+/scripts
+/routes

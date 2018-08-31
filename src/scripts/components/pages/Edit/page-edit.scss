@@ -1,0 +1,39 @@
+@import 'zen-css/import';
+@import 'zen-css/components/type';
+@import 'zen-css/components/card';
+
+:host {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: var(--size-small);
+    height: 100%;
+
+    --footer-height: #{default('size-large')};
+
+    & {
+        @extend %reset;
+    }
+    .card {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr var(--footer-height);
+
+        zen-tabs {
+            & > * {
+                padding: var(--size-main);
+            }
+        }
+
+        footer {
+            border-top: 1px solid var(--color-grey-100);
+            line-height: var(--footer-height);
+            display: flex;
+            & span {
+                flex: 1;
+                text-align: center;
+            }
+        }
+    }
+}
